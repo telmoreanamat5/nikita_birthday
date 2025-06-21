@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Nikita! 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(120deg, #f6d365, #fda085);
+      min-height: 100vh;
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .section {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .section.active {
+      display: flex;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 2em;
+      padding: 0 10px;
+    }
+
+    .main-photo {
+      width: 80vw;
+      max-width: 400px;
+      height: auto;
+      border-radius: 25px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 1.5em;
+      overflow: hidden;
+    }
+
+    .main-photo img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      
+    }
+
+    button {
+      background-color: #fff;
+      color: #f76b1c;
+      font-size: 1em;
+      font-weight: bold;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 1em;
+    }
+
+    button:hover {
+      background-color: #ffd6b3;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 20px;
+      padding: 0 10px;
+    }
+
+    .photo {
+      width: 45vw;
+      max-width: 200px;
+      height: auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .photo:hover {
+      transform: scale(1.05);
+    }
+
+    .photo img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #fff;
+    }
+
+    /* Fullscreen overlay */
+    .fullscreen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .fullscreen img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 25px rgba(255,255,255,0.6);
+    }
+  </style>
+</head>
+<body>
+  <!-- First Page -->
+  <section id="home" class="section active">
+    <h1>Happy Birthday, Nikita! 🎂</h1>
+    <p>Thank you for trusting me always — I promise to be there always for you.</p>
+    <div class="main-photo">
+      <img src="photos/hands.jpg" alt="Nikita Main Photo">
+    </div>
+    <p style="max-width: 600px; margin-top: 10px; font-size: 1.1em; line-height: 1.6;">
+      We may not share the same mother, but what we share is something far greater—trust, loyalty, and a bond that's purer than anything else in the world. You've always believed in me more than anyone else, and I promise that faith will never be broken. You're not just like a sister to me—you are my sister in every way that truly matters.
+    </p>
+    <button onclick="showGallery()">Move to Our Memory World</button>
+  </section>
+
+  <!-- Memory Gallery Page -->
+  <section id="gallery" class="section">
+    <h1>The Person I Love the Most 💖</h1>
+    <p style="max-width: 600px; font-size: 1.1em; line-height: 1.6; margin-bottom: 2em;">
+  You always make me smile. You irritate me without a reason, but still—I love you, sister.
+</p>
+
+    <div class="gallery">
+      <div class="photo"><img src="photos/photo1.jpg" alt="Memory 1" style="height:fit-content;"></div>
+      <div class="photo"><img src="photos/photo2.jpg" alt="Memory 2" style="height: fit-content;"></div>
+      <div class="photo"><img src="photos/photo3.jpeg" alt="Memory 3" style="height: fit-content;"></div>
+      <div class="photo"><img src="photos/photo4.jpg" alt="Memory 4" style="height: fit-content;"></div>
+    </div>
+    <button onclick="showDeepDive1()">Deep Dives into Memories</button>
+  </section>
+
+  <!-- Deep Dive 1: 3 Images -->
+  <section id="deepDive1" class="section">
+    <h1>Deeper into Our Bond 💫</h1>
+    <p style="max-width: 600px; font-size: 1.05em; line-height: 1.6; margin-bottom: 2em;">
+  I never cared much about capturing moments, but you changed that. Because of you, I now cherish every smile, every laugh, and every memory.
+</p>
+
+    <div class="gallery">
+      <div class="photo"><img src="photos/metroduo.jpg" alt="Memory 5"></div>
+      <div class="photo"><img src="photos/metroduo3.jpg" alt="Memory 6"></div>
+      <div class="photo"><img src="photos/metroduo4.jpg" alt="Memory 7"></div>
+    </div>
+    <button onclick="showDeepDive2()">Something Special ➡️</button>
+  </section>
+
+  <!-- Deep Dive 2: 2 Images -->
+  <section id="deepDive2" class="section">
+    <h1>Happiest Moment 🌟</h1>
+    <p style="max-width: 600px; font-size: 1.05em; line-height: 1.6; margin-bottom: 2em;">
+  I just love that you wore the dress I picked for you and came to the wedding. You looked so amazing that day—I can never forget it. I just want to stay in that moment forever.
+
+</p>
+
+    <div class="gallery">
+      <div class="photo"><img src="photos/smile.jpg" alt="Memory 8"></div>
+      <div class="photo"><img src="photos/sad.jpg" alt="Memory 9" style="height: auto;"></div>
+      <div class="photo"><img src="photos/tall.jpeg" alt="Memory 9"></div>
+    </div>
+  </section>
+
+  <footer>
+    Made with ❤️ by Anamat.
+  </footer>
+
+  
+
+  <script>
+    function showGallery() {
+      document.getElementById('home').classList.remove('active');
+      document.getElementById('gallery').classList.add('active');
+    }
+
+    
+
+    
+  function showDeepDive1() {
+      document.getElementById('gallery').classList.remove('active');
+      document.getElementById('deepDive1').classList.add('active');
+    }
+
+    function showDeepDive2() {
+      document.getElementById('deepDive1').classList.remove('active');
+      document.getElementById('deepDive2').classList.add('active');
+    }
+  </script>
+</body>
+</html>
